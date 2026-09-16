@@ -45,10 +45,10 @@
         }
       }
     },
-    "lobechat": {
-      "display_name": "LobeChat",
+    "App.Native.LobeChat": {
+      "display_name": "LobeHub",
       "desc": "LobeHub 是一个开源的AI对话助手平台，支持多种AI模型，提供优雅的用户界面和强大的功能。集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储，一键部署服务端数据库版本。为您提供完整的AI对话解决方案！<br><br>首次启动大概最长10分钟，根据用户网速决定，同时下载4个镜像，会比较慢！<br><br>首次使用需要注册账号使用<br><br>关于反向代理请查阅官方文档，需要更新lobechat-app容器中的环境变量及增加lobechat-casdoor容器中lobechat应用的重定向即可！<br><br><strong>📦 服务组件：</strong><br>• <strong>LobeChat 主应用</strong>：http://服务器IP:33210（安装时配置）<br>• <strong>Casdoor 身份认证</strong>：http://服务器IP:38000（安装时配置）<br>&nbsp;&nbsp;- 管理员账号：<code>admin</code><br>&nbsp;&nbsp;- 初始密码：<code>123</code><br>• <strong>PostgreSQL 数据库</strong>：35432（安装时配置）<br>&nbsp;&nbsp;- 数据库用户：<code>postgres</code><br>&nbsp;&nbsp;- 数据库密码：<code>postgres</code><br>&nbsp;&nbsp;- 数据库名称：<code>casdoor</code> / <code>lobechat</code><br>• <strong>RustFS 对象存储</strong><br>&nbsp;&nbsp;- API 端口：39000（安装时配置）<br>&nbsp;&nbsp;- 控制台端口：39001（安装时配置）<br>&nbsp;&nbsp;- 控制台地址：http://服务器IP:39001<br>&nbsp;&nbsp;- Access Key：<code>rustfsadmin</code><br>&nbsp;&nbsp;- Secret Key：<code>rustfsadmin</code>",
-      "platform": ["all"],
+      "platform": ["x86"],
       "categories": ["AI赋能"],
       "icon_url": "./lobechat/ICON.PNG",
       "readme_url": "./lobechat/README.md",
@@ -56,7 +56,7 @@
       "maintainer": "LobeChat Community",
       "maintainer_url": "https://lobehub.com/zh/docs/usage/start",
       "distributor": "听闻",
-      "distributor_url": "https://github.com/tingwensuojian",
+      "distributor_url": "https://sangxuesheng.com",
       "run_as": "package",
       "install_type": "",
       "is_docker": true,
@@ -66,8 +66,10 @@
           "changelog": "初始版本，集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储",
           "updated_at": "2026-02-09T00:00:00+08:00",
           "packages": {
-            "all": {
-              "download_url": "./lobechat/lobechat.fpk"
+            "x86": {
+              "download_url": "./lobechat/fpk/lobechat_v1.0.0.fpk",
+              "sha256": "e36ad89977c8e0cd534f8cd9ad0eae20a43f5f7e983ea30a6c703e622e36fcef",
+              "size": 311958
             }
           }
         }
