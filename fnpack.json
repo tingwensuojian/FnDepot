@@ -1,31 +1,114 @@
 {
-  "fntermx": {
-    "display_name": "fntermx 终端",
-    "desc": "一款支持持久化的终端应用",
-    "labels": "工具,效率",
-    "version": "1.1.0",
-    "author": "EWEDL",
-    "author_url": "https://github.com/EWEDLCM/",
-    "download_url": "",
-    "bug_report_url": "https://github.com/EWEDLCM/FnDepot/fntermx/issues",
-    "install_type": "系统空间",
-    "size": "28.7",
-    "history": {
-      "v1.1.0": "新增支持秘钥、系统识别、孤立日志清理、标签栏样式选择、光标样式选择；优化手机端样式、工具栏、手势操作（没有演示），改用db存储数据，开启外部访问地址填写"
-    }
+  "schema_version": "2",
+  "source_info": {
+    "name": "听闻的应用源",
+    "author": "听闻",
+    "homepage": "https://github.com/tingwensuojian",
+    "description": "个人维护的飞牛 fnOS 第三方应用源"
   },
-  "lobechat": {
-    "display_name": "LobeChat",
-    "version": "1.0.0",
-    "desc": "LobeHub 是一个开源的AI对话助手平台，支持多种AI模型，提供优雅的用户界面和强大的功能。集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储，一键部署服务端数据库版本。为您提供完整的AI对话解决方案！<br><br>首次启动大概最长10分钟，根据用户网速决定，同时下载4个镜像，会比较慢！<br><br>首次使用需要注册账号使用<br><br>关于反向代理请查阅官方文档，需要更新lobechat-app容器中的环境变量及增加lobechat-casdoor容器中lobechat应用的重定向即可！<br><br><strong>📦 服务组件：</strong><br>• <strong>LobeChat 主应用</strong>：http://服务器IP:33210（安装时配置）<br>• <strong>Casdoor 身份认证</strong>：http://服务器IP:38000（安装时配置）<br>&nbsp;&nbsp;- 管理员账号：<code>admin</code><br>&nbsp;&nbsp;- 初始密码：<code>123</code><br>• <strong>PostgreSQL 数据库</strong>：35432（安装时配置）<br>&nbsp;&nbsp;- 数据库用户：<code>postgres</code><br>&nbsp;&nbsp;- 数据库密码：<code>postgres</code><br>&nbsp;&nbsp;- 数据库名称：<code>casdoor</code> / <code>lobechat</code><br>• <strong>RustFS 对象存储</strong><br>&nbsp;&nbsp;- API 端口：39000（安装时配置）<br>&nbsp;&nbsp;- 控制台端口：39001（安装时配置）<br>&nbsp;&nbsp;- 控制台地址：http://服务器IP:39001<br>&nbsp;&nbsp;- Access Key：<code>rustfsadmin</code><br>&nbsp;&nbsp;- Secret Key：<code>rustfsadmin</code><br><br><strong>",
-    "labels": "工具,AI",
-    "author": "LobeChat Community",
-    "author_url": "https://lobehub.com/zh/docs/usage/start",
-    "bug_report_url": "https://sangxuesheng.com/archives/1166.html",
-    "install_type": "存储空间",
-    "size": "1",
-    "history": {
-      "v1.0.0": "初始版本，集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储"
+  "apps": {
+    "fntermx": {
+      "display_name": "FntermX 终端",
+      "desc": "一款支持持久化、本地终端和远程 SSH 连接管理的终端应用。",
+      "platform": ["x86"],
+      "categories": ["系统工具"],
+      "icon_url": "./fntermx/ICON.PNG",
+      "preview_urls": [
+        "./fntermx/Preview/1.png",
+        "./fntermx/Preview/2.png",
+        "./fntermx/Preview/3.png",
+        "./fntermx/Preview/4.png",
+        "./fntermx/Preview/5.png"
+      ],
+      "readme_url": "./fntermx/README.md",
+      "bug_report_url": "https://github.com/EWEDLCM/FnDepot/issues",
+      "maintainer": "EWEDL",
+      "maintainer_url": "https://club.fnnas.com/home.php?mod=space&uid=5411",
+      "distributor": "听闻",
+      "distributor_url": "https://github.com/tingwensuojian",
+      "run_as": "package",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.1.9": {
+          "changelog": "适配fnOS新版HttpOnly认证网关，修复本地终端认证失败和SSH配置保存失败，并增强应用JWT请求隔离",
+          "updated_at": "2026-09-05T13:49:32+08:00",
+          "os_min_version": "1.1.31",
+          "packages": {
+            "x86": {
+              "download_url": "./fntermx/fpk/fntermx_v1.1.9.fpk",
+              "sha256": "bbbdc5e85f2ba63567038f0e66c0780eea40cf585260d393f217c7cafadcc6d0",
+              "size": 29938351
+            }
+          }
+        }
+      }
+    },
+    "lobechat": {
+      "display_name": "LobeChat",
+      "desc": "LobeHub 是一个开源的AI对话助手平台，支持多种AI模型，提供优雅的用户界面和强大的功能。集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储，一键部署服务端数据库版本。为您提供完整的AI对话解决方案！<br><br>首次启动大概最长10分钟，根据用户网速决定，同时下载4个镜像，会比较慢！<br><br>首次使用需要注册账号使用<br><br>关于反向代理请查阅官方文档，需要更新lobechat-app容器中的环境变量及增加lobechat-casdoor容器中lobechat应用的重定向即可！<br><br><strong>📦 服务组件：</strong><br>• <strong>LobeChat 主应用</strong>：http://服务器IP:33210（安装时配置）<br>• <strong>Casdoor 身份认证</strong>：http://服务器IP:38000（安装时配置）<br>&nbsp;&nbsp;- 管理员账号：<code>admin</code><br>&nbsp;&nbsp;- 初始密码：<code>123</code><br>• <strong>PostgreSQL 数据库</strong>：35432（安装时配置）<br>&nbsp;&nbsp;- 数据库用户：<code>postgres</code><br>&nbsp;&nbsp;- 数据库密码：<code>postgres</code><br>&nbsp;&nbsp;- 数据库名称：<code>casdoor</code> / <code>lobechat</code><br>• <strong>RustFS 对象存储</strong><br>&nbsp;&nbsp;- API 端口：39000（安装时配置）<br>&nbsp;&nbsp;- 控制台端口：39001（安装时配置）<br>&nbsp;&nbsp;- 控制台地址：http://服务器IP:39001<br>&nbsp;&nbsp;- Access Key：<code>rustfsadmin</code><br>&nbsp;&nbsp;- Secret Key：<code>rustfsadmin</code>",
+      "platform": ["all"],
+      "categories": ["AI赋能"],
+      "icon_url": "./lobechat/ICON.PNG",
+      "readme_url": "./lobechat/README.md",
+      "bug_report_url": "https://sangxuesheng.com/archives/1166.html",
+      "maintainer": "LobeChat Community",
+      "maintainer_url": "https://lobehub.com/zh/docs/usage/start",
+      "distributor": "听闻",
+      "distributor_url": "https://github.com/tingwensuojian",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": true,
+      "service_port": "33210",
+      "releases": {
+        "1.0.0": {
+          "changelog": "初始版本，集成Casdoor身份认证、PostgreSQL数据库和RustFS对象存储",
+          "updated_at": "2026-02-09T00:00:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "./lobechat/lobechat.fpk"
+            }
+          }
+        }
+      }
+    },
+    "genoffice": {
+      "display_name": "GenOffice",
+      "desc": "全球首款功能齐全的开源人工智能办公套件。支持文档(Word)、表格(Excel)、演示(PPT)、PDF阅读标注、Markdown、HTML六大编辑器。纯离线编辑，数据不出NAS，支持AI写作与表格分析，文件管理器右键直接打开编辑。",
+      "platform": ["all"],
+      "categories": ["生活服务", "AI赋能"],
+      "icon_url": "./genoffice/ICON.PNG",
+      "preview_urls": [
+        "./genoffice/Preview/1.png",
+        "./genoffice/Preview/2.png",
+        "./genoffice/Preview/3.png",
+        "./genoffice/Preview/4.png"
+      ],
+      "readme_url": "./genoffice/README.md",
+      "bug_report_url": "https://github.com/genspark-ai/genoffice/issues",
+      "maintainer": "Genspark",
+      "maintainer_url": "https://github.com/genspark-ai/genoffice",
+      "distributor": "听闻",
+      "distributor_url": "https://sangxuesheng.com",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "0.10.63": {
+          "changelog": "升级到上游 v0.10.63：修复文件关联长文件名打不开（301改302+no-store）；修复标签页首次不显示（WebSocket事件缓存/重放机制）；go-picker支持授权文件夹显示和21种语言；移除go-picker冗余Enter按钮；HTML预览sandbox强制添加allow-same-origin。",
+          "updated_at": "2026-09-16T08:54:00+08:00",
+          "os_min_version": "1.2.0401",
+          "packages": {
+            "all": {
+              "download_url": "./genoffice/fpk/genoffice_v0.10.63.fpk",
+              "sha256": "5975afd5df704a372cf6c694bd238a868d24d81f64f0775b6163fadba5995cab",
+              "size": 77982352
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,0 +1,25 @@
+# macOS metadata
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Thumbnails
+._*
+.Spotlight-V100
+.Trashes
+
+# local fpk cache
+fpks/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary
+*.tmp
+*.log
